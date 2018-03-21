@@ -4,7 +4,7 @@ class LoanHero < ApplicationRecord
     require 'net/http'
 
     class << self
-        def merchant_login(params = {})   
+        def merchant_login(params = {})           
             begin        
                 uri = URI.parse base_url
                 data = params                ####### {email: "invisalign@loanhero.com", password: "$$!Lfgb5gOl", subdoman: "invisalign" }
@@ -15,12 +15,13 @@ class LoanHero < ApplicationRecord
                 response = http.request(request)
                 resp_obj = response_object response.body
                 if response.code == "200"
-                    return resp_obj
+                    return {status: response.code, body: resp_obj}
                 else
-                    return response.body.msg
+                    return {status: response.code, message: response.body.msg }
                 end
             rescue Exception => e
                 logger.fatal("Error Occured ===> #{e.inspect}")
+                return nil
             end 
         end
 

@@ -1,0 +1,51 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "authenticate";
+
+.row{
+    height: 120%;
+}
+
+.logo{
+    background-color: snow;
+}
+
+.main{
+    background-color: cornsilk;
+    height: auto;
+    min-height: 885px;
+}
+
+.row{
+    height: 120%;
+}
+
+.header{
+    background-color: #dcd5d5;
+    margin-left: -16px;
+    width: 103%;
+}
+
+.details{
+    margin-top: 60px;
+}
+
+.details_panel{
+    background-color: seashell;
+    height: 24pc;
+}
+
+.jumbotron{
+    background-color: rgb(147, 187, 87);
+    margin-top: 30px;
+}
+
+.navHeads{
+    color: #c55e53;
+}
+
+.welcome{
+    float: right;
+    margin-top: 2px;
+    font-weight: 15px;
+}
