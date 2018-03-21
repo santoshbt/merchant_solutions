@@ -1,6 +1,4 @@
 class AuthenticateController < ApplicationController
-    require 'hashie'
-
     def login
         redirect_to homepage_path unless current_user.blank?
     end
