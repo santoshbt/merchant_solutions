@@ -26,11 +26,11 @@ class AuthenticateController < ApplicationController
         end    
     end
 
-    def logout
+    def logout        
         reset_session
-        session[:current_user] = nil
+        session[:current_user] = nil   
         flash[:success] = "Logged out successfully"
-        redirect_to root_path
+        redirect_to root_path             
     end
 
 end
